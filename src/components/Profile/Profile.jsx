@@ -11,6 +11,7 @@ import {
     StatSpanQuantity,
 
 } from "./Profile.styled"
+import PropTypes from 'prop-types';
 
 export const Profile = ({ userInfo: { avatar, username, tag, location, stats } }) => {
     return (
@@ -42,3 +43,18 @@ export const Profile = ({ userInfo: { avatar, username, tag, location, stats } }
             </ProfileWrap>
     );
 }
+
+Profile.propTypes = {
+  userInfo: PropTypes.exact({
+    avatar: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.exact({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired
+    })
+
+})
+};
