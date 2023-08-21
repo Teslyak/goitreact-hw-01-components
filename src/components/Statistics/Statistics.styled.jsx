@@ -3,7 +3,6 @@ const { styled } = require('styled-components');
 export const Section = styled.section`
 margin-top: 40px;
   width: 400px;
-  height: 100px;
   margin-right: auto;
   margin-left: auto;
   background-color: #ddd6d6;
