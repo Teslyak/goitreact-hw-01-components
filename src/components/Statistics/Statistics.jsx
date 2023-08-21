@@ -1,4 +1,4 @@
-import { PropTypes } from "prop-types";
+import propTypes  from "prop-types";
 
 import { Section, StatLisItem, StatList, Tittle } from "./Statistics.styled";
 
@@ -20,12 +20,12 @@ export const Statistics = (props) => {
 };
 
 Statistics.propTypes = {
-    statTittle: PropTypes.string,
-    stats: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            label: PropTypes.string.isRequired,
-            percentage: PropTypes.number.isRequired,
+    statTittle: propTypes.string,
+    stats: propTypes.arrayOf(
+        propTypes.shape({
+            id: propTypes.string.isRequired,
+            label: propTypes.string.isRequired,
+            percentage: propTypes.number.isRequired,
         })
     )
 }
